@@ -1,0 +1,130 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: black;
+    background-image: url(/images/PoEAffliction_AmbientBackground.png);
+    background-size: cover;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.table-container {
+    display: table;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-text {
+    color: white;
+    display: inline-block;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.tooltip-text {
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-bottom: 2px dotted #FFFFFF;
+}
+
+.credits {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.credits p {
+    margin-bottom: 0px;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.min-value {
+    width: 40px;
+}
+
+.scarab-checkbox {
+    width: 24px;
+    height: 24px;
+    accent-color: white;
+}
+
+.update-time {
+    color: white;
+    font-size: 18px;
+    padding: 10px 0px 15px 0px;
+    text-align: center;
+}
+
+.submit-button {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    color: white;
+}
+
+table, td, th {
+    border: 1px solid #A0A0A0;
+}
+
+thead {
+    border: 3px solid #A0A0A0;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: #C0C0C0;
+}
+
+tr {
+    border: 2px solid #A0A0A0;
+}
+
+td, th {
+    padding: 3px 8px 3px 8px;
+}
+
+table tr:nth-child(odd) td {
+    background: #202020;
+}
+
+.map-name {
+    font-weight: 600;
+}
+
+.card-name {
+    color: #F0F0F0;
+}

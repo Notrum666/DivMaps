@@ -1,0 +1,907 @@
+{
+    "Bone Crypt Map": [
+        "The Wretched",
+        "Grave Knowledge",
+        "The Forsaken",
+        "The Celestial Justicar",
+        "The Summoner",
+        "Coveted Possession",
+        "The Rabbit's Foot"
+    ],
+    "Flooded Mine Map": [
+        "The Fathomless Depths",
+        "The Endurance",
+        "Gift of the Gemling Queen",
+        "The Rite of Elements",
+        "A Stone Perfected",
+        "Time-Lost Relic",
+        "Gift of Asenath",
+        "The Survivalist",
+        "Volatile Power",
+        "Buried Treasure",
+        "Bijoux",
+        "Treasure Hunter",
+        "Glimmer of Hope",
+        "The Wolf",
+        "The Primordial"
+    ],
+    "Glacier Map": [
+        "Mitts",
+        "The Wolverine",
+        "The Mountain",
+        "A Chilling Wind"
+    ],
+    "Pier Map": [
+        "The Pact",
+        "The Catch",
+        "The Drunken Aristocrat",
+        "The Old Man",
+        "Lantador's Lost Love",
+        "Lucky Connections",
+        "The Carrion Crow",
+        "The Journey",
+        "Prosperity"
+    ],
+    "Core Map": [
+        "The Soul",
+        "The Hunger",
+        "The Surveyor",
+        "The Beast",
+        "The Insatiable",
+        "The Oath",
+        "Vile Power",
+        "The Nurse",
+        "Vinia's Token",
+        "Echoes of Love"
+    ],
+    "Crimson Township Map": [
+        "Home",
+        "The Lord of Celebration",
+        "The Carrion Crow",
+        "The Opulent",
+        "The Apothecary"
+    ],
+    "Dunes Map": [
+        "Baited Expectations",
+        "A Note in the Wind",
+        "Earth Drinker",
+        "Acclimatisation",
+        "The Tumbleweed",
+        "Imperial Legacy",
+        "The Fortunate"
+    ],
+    "Fields Map": [
+        "Tranquillity",
+        "More is Never Enough",
+        "The Fortunate",
+        "The Carrion Crow",
+        "Rain of Chaos",
+        "Ambitious Obsession",
+        "The Fox",
+        "The Harvester",
+        "The Scarred Meadow"
+    ],
+    "Forking River Map": [
+        "Left to Fate",
+        "Hunter's Resolve",
+        "The Old Man",
+        "The Side Quest",
+        "The Carrion Crow",
+        "The Long Watch"
+    ],
+    "Infested Valley Map": [
+        "More is Never Enough",
+        "The Side Quest",
+        "Struck by Lightning",
+        "Ambitious Obsession",
+        "The Long Watch"
+    ],
+    "Laboratory Map": [
+        "The Carrion Crow",
+        "The Lord of Celebration",
+        "The Fiend",
+        "The Opulent",
+        "Further Invention",
+        "The Thaumaturgist"
+    ],
+    "Port Map": [
+        "Dying Anguish",
+        "The Pact",
+        "The Catch",
+        "Lantador's Lost Love",
+        "Lucky Connections",
+        "The Carrion Crow",
+        "The Saint's Treasure",
+        "The Tyrant",
+        "The Journey",
+        "Jack in the Box",
+        "The Poet",
+        "Prosperity",
+        "Assassin's Favour"
+    ],
+    "Ancient City Map": [
+        "Home",
+        "The Catalyst",
+        "The Carrion Crow",
+        "The Tyrant",
+        "The Admirer",
+        "Arrogance of the Vaal",
+        "The Damned",
+        "The Fortunate"
+    ],
+    "Castle Ruins Map": [
+        "The Harvester",
+        "The Betrayal",
+        "The Mercenary",
+        "The Side Quest",
+        "The Tyrant",
+        "Rain of Chaos",
+        "The Fox",
+        "The Long Watch",
+        "The Road to Power"
+    ],
+    "Chateau Map": [
+        "Boon of Justice",
+        "Brotherhood in Exile",
+        "Home",
+        "The Carrion Crow",
+        "The Lord of Celebration",
+        "The Opulent",
+        "The Scavenger"
+    ],
+    "Conservatory Map": [
+        "Boon of Justice",
+        "Brotherhood in Exile",
+        "The Carrion Crow",
+        "The Lord of Celebration",
+        "The Opulent"
+    ],
+    "Estuary Map": [
+        "The Standoff",
+        "The Catch",
+        "The Old Man",
+        "Lantador's Lost Love",
+        "The Journey",
+        "Prosperity",
+        "From Bone to Ashes",
+        "The Fortunate"
+    ],
+    "Overgrown Shrine Map": [
+        "The Soul",
+        "The Sigil",
+        "The Artist",
+        "The Dark Mage",
+        "Harmony of Souls",
+        "Shard of Fate",
+        "Emperor of Purity",
+        "The Surgeon",
+        "Echoes of Love",
+        "The Garish Power"
+    ],
+    "Ramparts Map": [
+        "The Pack Leader",
+        "Left to Fate",
+        "The Drunken Aristocrat",
+        "Hunter's Resolve",
+        "The Scout",
+        "The Carrion Crow",
+        "The Flora's Gift",
+        "The Traitor",
+        "Alivia's Grace"
+    ],
+    "Strand Map": [
+        "The Formless Sea",
+        "The Betrayal",
+        "The Catch",
+        "The Old Man",
+        "The Landing",
+        "Lantador's Lost Love",
+        "The Mercenary",
+        "Scholar of the Seas",
+        "The Journey",
+        "The One That Got Away",
+        "The Deep Ones",
+        "The Stormcaller",
+        "Prosperity",
+        "From Bone to Ashes",
+        "Thunderous Skies"
+    ],
+    "Acid Caverns Map": [
+        "Vile Power",
+        "The Inoculated"
+    ],
+    "Cemetery Map": [
+        "More is Never Enough",
+        "The One With All",
+        "Man With Bear",
+        "The Union",
+        "Struck by Lightning",
+        "Cursed Words",
+        "Ambitious Obsession",
+        "Brother's Gift",
+        "Brother's Stash"
+    ],
+    "Colonnade Map": [
+        "Dying Anguish",
+        "Merciless Armament",
+        "Gemcutter's Promise",
+        "The Carrion Crow",
+        "Struck by Lightning",
+        "Jack in the Box",
+        "The Patient",
+        "The Warlord"
+    ],
+    "Grotto Map": [
+        "A Stone Perfected",
+        "The Endurance",
+        "The Rite of Elements",
+        "Gift of the Gemling Queen",
+        "The Jeweller's Boon",
+        "A Sea of Blue",
+        "Time-Lost Relic",
+        "The Watcher",
+        "The Shepherd's Sandals",
+        "Gift of Asenath",
+        "Volatile Power",
+        "The Primordial",
+        "Buried Treasure",
+        "Bijoux",
+        "Treasure Hunter",
+        "Pride of the First Ones",
+        "The Wolf",
+        "Loyalty"
+    ],
+    "Lookout Map": [
+        "The Blazing Fire",
+        "The Carrion Crow",
+        "The Life Thief",
+        "The Enlightened",
+        "The Journalist"
+    ],
+    "Moon Temple Map": [
+        "Wealth and Power",
+        "The Carrion Crow",
+        "The Lunaris Priestess",
+        "The Twilight Moon",
+        "The Enlightened"
+    ],
+    "Precinct Map": [
+        "The Undaunted",
+        "Dying Anguish",
+        "The Saint's Treasure",
+        "The Carrion Crow",
+        "The Tyrant",
+        "Jack in the Box",
+        "The Gentleman"
+    ],
+    "Vaal Pyramid Map": [
+        "The Catalyst",
+        "Three Voices",
+        "The Inventor",
+        "The Admirer",
+        "The Damned",
+        "Unrequited Love",
+        "The Hive of Knowledge"
+    ],
+    "Academy Map": [
+        "Destined to Crumble",
+        "Fire Of Unknown Origin",
+        "The Scholar",
+        "The Drunken Aristocrat",
+        "Turn the Other Cheek",
+        "Thirst for Knowledge",
+        "The Carrion Crow",
+        "Checkmate",
+        "The Academic",
+        "The Professor",
+        "The Enthusiasts",
+        "A Dab of Ink"
+    ],
+    "Ashen Wood Map": [
+        "The Pack Leader",
+        "Tranquillity",
+        "The Scout",
+        "The Flora's Gift",
+        "The Scarred Meadow",
+        "Alivia's Grace"
+    ],
+    "Atoll Map": [
+        "The Wind",
+        "The Catch",
+        "The Spark and the Flame",
+        "The Old Man",
+        "Lantador's Lost Love",
+        "The Journey",
+        "Prosperity",
+        "The Fortunate"
+    ],
+    "Courtyard Map": [
+        "Rain Tempter",
+        "Emperor's Luck",
+        "The Porcupine",
+        "The Carrion Crow",
+        "A Mother's Parting Gift",
+        "Three Voices",
+        "Struck by Lightning",
+        "The Stormcaller",
+        "Peaceful Moments",
+        "The Fox in the Brambles",
+        "Thunderous Skies",
+        "The Easy Stroll"
+    ],
+    "Dry Sea Map": [
+        "Baited Expectations",
+        "A Note in the Wind",
+        "Earth Drinker",
+        "Acclimatisation",
+        "The Tumbleweed",
+        "Imperial Legacy",
+        "The Fortunate"
+    ],
+    "Gardens Map": [
+        "Rain Tempter",
+        "Emperor's Luck",
+        "The Porcupine",
+        "A Mother's Parting Gift",
+        "The Fox in the Brambles",
+        "Peaceful Moments",
+        "The Easy Stroll"
+    ],
+    "Siege Map": [
+        "Home",
+        "More is Never Enough",
+        "The Spark and the Flame",
+        "The Side Quest",
+        "The Carrion Crow",
+        "Ambitious Obsession",
+        "The Long Watch"
+    ],
+    "Tropical Island Map": [
+        "The Pack Leader",
+        "The Catch",
+        "The Old Man",
+        "The Destination",
+        "Lantador's Lost Love",
+        "The Scout",
+        "The Flora's Gift",
+        "The Journey",
+        "The Fortunate",
+        "Prosperity",
+        "Alivia's Grace"
+    ],
+    "Crystal Ore Map": [
+        "The Endurance",
+        "Gift of the Gemling Queen",
+        "The Jeweller's Boon",
+        "The Drunken Aristocrat",
+        "A Sea of Blue",
+        "Time-Lost Relic",
+        "Gift of Asenath",
+        "Three Voices",
+        "Volatile Power",
+        "Buried Treasure",
+        "Bijoux",
+        "Treasure Hunter",
+        "The Wolf"
+    ],
+    "Dark Forest Map": [
+        "The Pack Leader",
+        "Call to the First Ones",
+        "The Wolven King's Bite",
+        "The Scout",
+        "Mawr Blaidd",
+        "The Flora's Gift",
+        "The Wolf's Shadow",
+        "The Dragon",
+        "The Road to Power",
+        "Alivia's Grace",
+        "The Demoness"
+    ],
+    "Palace Map": [
+        "The Unexpected Prize",
+        "The Dapper Prodigy",
+        "The Carrion Crow",
+        "The Lord of Celebration",
+        "The Opulent",
+        "Light and Truth"
+    ],
+    "Promenade Map": [
+        "Dying Anguish",
+        "Merciless Armament",
+        "The Patient",
+        "Gemcutter's Promise",
+        "The Carrion Crow",
+        "Struck by Lightning",
+        "Jack in the Box",
+        "The Traitor",
+        "The Warlord"
+    ],
+    "Shore Map": [
+        "The Catch",
+        "The Old Man",
+        "The Landing",
+        "Lantador's Lost Love",
+        "The Destination",
+        "The Journey",
+        "The One That Got Away",
+        "Prosperity",
+        "From Bone to Ashes",
+        "The Fortunate",
+        "The Road to Power"
+    ],
+    "Thicket Map": [
+        "The Pack Leader",
+        "Call to the First Ones",
+        "The Scout",
+        "The Flora's Gift",
+        "The Explorer",
+        "Alivia's Grace"
+    ],
+    "Waste Pool Map": [
+        "The Soul",
+        "The Witch",
+        "The Throne",
+        "The Brawny Battle Mage",
+        "Vile Power",
+        "The Doctor",
+        "The Feast",
+        "The Incantation"
+    ],
+    "Bog Map": [
+        "Death",
+        "The Inoculated"
+    ],
+    "Caldera Map": [
+        "The Battle Born",
+        "The King's Heart",
+        "Pride Before the Fall",
+        "From Bone to Ashes",
+        "The Fortunate"
+    ],
+    "Cursed Crypt Map": [
+        "The Wretched",
+        "Grave Knowledge",
+        "The Forsaken",
+        "The Celestial Justicar",
+        "The Rabbit's Foot"
+    ],
+    "Dig Map": [
+        "The Endurance",
+        "Gift of the Gemling Queen",
+        "More is Never Enough",
+        "Time-Lost Relic",
+        "Gift of Asenath",
+        "Volatile Power",
+        "Buried Treasure",
+        "Bijoux",
+        "Ambitious Obsession",
+        "The Wolf"
+    ],
+    "Frozen Cabins Map": [
+        "Mitts",
+        "Humility",
+        "A Chilling Wind"
+    ],
+    "Plateau Map": [
+        "The Wind",
+        "The Catch",
+        "The Spark and the Flame",
+        "The Old Man",
+        "Lantador's Lost Love",
+        "The Journey",
+        "Prosperity",
+        "The Fortunate"
+    ],
+    "Relic Chambers Map": [
+        "Blind Venture",
+        "The Carrion Crow",
+        "The Lord of Celebration",
+        "Might is Right",
+        "The Opulent",
+        "The Polymath",
+        "No Traces",
+        "Costly Curio"
+    ],
+    "Arachnid Nest Map": [
+        "The Web",
+        "The Wedding Gift"
+    ],
+    "City Square Map": [
+        "Home",
+        "The Carrion Crow",
+        "Three Voices",
+        "The Journalist",
+        "The Life Thief",
+        "The Blazing Fire"
+    ],
+    "Grave Trough Map": [
+        "The One With All",
+        "The Union",
+        "Cursed Words",
+        "Brother's Gift",
+        "Brother's Stash"
+    ],
+    "Overgrown Ruin Map": [
+        "The Sigil",
+        "The Artist",
+        "The Dark Mage",
+        "Shard of Fate",
+        "Emperor of Purity",
+        "The Surgeon",
+        "Echoes of Love",
+        "The Garish Power"
+    ],
+    "Spider Forest Map": [
+        "The Betrayal",
+        "The Pack Leader",
+        "The Witch",
+        "The Scout",
+        "The Brawny Battle Mage",
+        "The Flora's Gift",
+        "The Summoner",
+        "The Incantation",
+        "The Doctor",
+        "Alivia's Grace"
+    ],
+    "Summit Map": [
+        "The Wind",
+        "The Wolverine",
+        "More is Never Enough",
+        "Mitts",
+        "The Mountain",
+        "The Carrion Crow",
+        "Ambitious Obsession",
+        "A Chilling Wind"
+    ],
+    "Wasteland Map": [],
+    "Channel Map": [
+        "The Scavenger",
+        "The Destination",
+        "Humility",
+        "The Carrion Crow"
+    ],
+    "Foundry Map": [
+        "The Carrion Crow",
+        "Soul Quenched",
+        "The Fiend",
+        "Further Invention",
+        "The Thaumaturgist"
+    ],
+    "Iceberg Map": [
+        "The Long Watch",
+        "Mitts",
+        "The Side Quest",
+        "A Chilling Wind"
+    ],
+    "Park Map": [
+        "The Carrion Crow"
+    ],
+    "Sepulchre Map": [
+        "The Soul",
+        "The Witch",
+        "The Brawny Battle Mage",
+        "Might is Right",
+        "Harmony of Souls",
+        "The Doctor",
+        "The Incantation",
+        "No Traces"
+    ],
+    "Spider Lair Map": [
+        "The Web",
+        "The Wedding Gift"
+    ],
+    "Arena Map": [
+        "The Last One Standing",
+        "Unchained",
+        "The Carrion Crow",
+        "The Sword King's Salute",
+        "Three Voices",
+        "The Gladiator",
+        "The Deceiver",
+        "The Visionary",
+        "The King's Blade"
+    ],
+    "Carcass Map": [
+        "The Hunger",
+        "The Surveyor",
+        "The Beast",
+        "The Insatiable",
+        "The Oath",
+        "Vile Power"
+    ],
+    "Coves Map": [
+        "The Formless Sea",
+        "A Stone Perfected",
+        "The Rite of Elements",
+        "The Catch",
+        "The Old Man",
+        "Lantador's Lost Love",
+        "Scholar of the Seas",
+        "The Journey",
+        "The Deep Ones",
+        "Prosperity",
+        "The Vast",
+        "From Bone to Ashes",
+        "The Primordial"
+    ],
+    "Crater Map": [
+        "The Standoff",
+        "The Fortunate"
+    ],
+    "Underground Sea Map": [
+        "The Fathomless Depths",
+        "The Avenger",
+        "The Siren",
+        "The Hoarder",
+        "The Survivalist",
+        "Treasure Hunter",
+        "The Cache",
+        "Glimmer of Hope",
+        "The Lover",
+        "Lysah's Respite"
+    ],
+    "Wharf Map": [
+        "A Stone Perfected",
+        "The Pact",
+        "The Rite of Elements",
+        "The Catch",
+        "The Old Man",
+        "Lantador's Lost Love",
+        "Lucky Connections",
+        "The Carrion Crow",
+        "The Journey",
+        "Struck by Lightning",
+        "Prosperity",
+        "The Primordial"
+    ],
+    "Arcade Map": [
+        "Home",
+        "The Saint's Treasure",
+        "The Carrion Crow",
+        "The Tyrant",
+        "The Poet",
+        "Assassin's Favour"
+    ],
+    "Burial Chambers Map": [
+        "The Betrayal",
+        "The Witch",
+        "The One With All",
+        "The Fortunate",
+        "The Brawny Battle Mage",
+        "The Summoner",
+        "The Incantation",
+        "The Doctor"
+    ],
+    "Ghetto Map": [
+        "Dying Anguish",
+        "The Saint's Treasure",
+        "The Carrion Crow",
+        "The Tyrant",
+        "Jack in the Box",
+        "The Gentleman"
+    ],
+    "Mineral Pools Map": [
+        "The Fathomless Depths",
+        "The Avenger",
+        "The Jeweller's Boon",
+        "The Hoarder",
+        "A Sea of Blue",
+        "The Side Quest",
+        "The Survivalist",
+        "The Cache",
+        "The Long Watch",
+        "Glimmer of Hope",
+        "The Fortunate"
+    ],
+    "Racecourse Map": [
+        "The Visionary",
+        "The Deceiver",
+        "Three Voices",
+        "The Carrion Crow"
+    ],
+    "Volcano Map": [
+        "The Battle Born",
+        "From Bone to Ashes",
+        "Pride Before the Fall",
+        "The King's Heart"
+    ],
+    "Basilica Map": [
+        "The Enlightened",
+        "The Opulent",
+        "The Carrion Crow",
+        "The Lord of Celebration"
+    ],
+    "Colosseum Map": [
+        "The Last One Standing",
+        "Unchained",
+        "The Carrion Crow",
+        "The Sword King's Salute",
+        "The Gladiator",
+        "The Deceiver",
+        "The Visionary",
+        "The King's Blade"
+    ],
+    "Lava Chamber Map": [
+        "The Avenger",
+        "The Standoff",
+        "Burning Blood"
+    ],
+    "Museum Map": [
+        "The Soul",
+        "Destined to Crumble",
+        "Blind Venture",
+        "The Scholar",
+        "Turn the Other Cheek",
+        "Thirst for Knowledge",
+        "The Academic",
+        "Checkmate",
+        "The Polymath",
+        "The Professor",
+        "The Enthusiasts",
+        "A Dab of Ink",
+        "Costly Curio",
+        "Echoes of Love"
+    ],
+    "Necropolis Map": [
+        "Grave Knowledge",
+        "The Wretched",
+        "The Forsaken"
+    ],
+    "Orchard Map": [
+        "Boon of Justice",
+        "Brotherhood in Exile",
+        "Rain Tempter",
+        "Emperor's Luck",
+        "The Porcupine",
+        "A Mother's Parting Gift",
+        "The Fox in the Brambles",
+        "The Road to Power",
+        "The Fortunate",
+        "Peaceful Moments",
+        "The Easy Stroll"
+    ],
+    "Arid Lake Map": [
+        "The Fortunate"
+    ],
+    "Cage Map": [
+        "The Penitent",
+        "The Dungeon Master",
+        "The Carrion Crow",
+        "The Chains that Bind",
+        "The Summoner",
+        "The Warden"
+    ],
+    "Canyon Map": [
+        "The Fortunate",
+        "The Scavenger"
+    ],
+    "Crimson Temple Map": [
+        "The Lord of Celebration",
+        "The Journalist",
+        "The Opulent",
+        "The Apothecary",
+        "The Life Thief",
+        "The Enlightened",
+        "The Blazing Fire"
+    ],
+    "Mud Geyser Map": [
+        "Death",
+        "The Wretched",
+        "The Inoculated"
+    ],
+    "Jungle Valley Map": [
+        "The Wind",
+        "The Pack Leader",
+        "The Wedding Gift",
+        "The Scout",
+        "The Fortunate",
+        "The Flora's Gift",
+        "The Web",
+        "Alivia's Grace"
+    ],
+    "Maze Map": [
+        "The Catalyst",
+        "The Inventor",
+        "The Admirer",
+        "The Damned",
+        "Unrequited Love",
+        "The Hive of Knowledge"
+    ],
+    "Plaza Map": [
+        "Boon of Justice",
+        "Brotherhood in Exile"
+    ],
+    "Reef Map": [
+        "The Formless Sea",
+        "The Catch",
+        "More is Never Enough",
+        "The Old Man",
+        "Lantador's Lost Love",
+        "Scholar of the Seas",
+        "The Journey",
+        "The Deep Ones",
+        "Ambitious Obsession",
+        "Prosperity",
+        "The Vast"
+    ],
+    "Temple Map": [
+        "The Sun",
+        "The Carrion Crow",
+        "The Lord of Celebration",
+        "The Enlightened",
+        "The Opulent",
+        "Dialla's Subjugation",
+        "Boundless Realms"
+    ],
+    "Bramble Valley Map": [
+        "The Pack Leader",
+        "Call to the First Ones",
+        "The Scout",
+        "Mawr Blaidd",
+        "The Flora's Gift",
+        "The Dragon",
+        "Alivia's Grace",
+        "The Demoness"
+    ],
+    "Ivory Temple Map": [
+        "The Enlightened",
+        "The Opulent",
+        "The Lord of Celebration"
+    ],
+    "Mesa Map": [
+        "The Wind",
+        "The Betrayal",
+        "The Fortunate"
+    ],
+    "Underground River Map": [
+        "Treasure Hunter"
+    ],
+    "Vault Map": [
+        "A Stone Perfected",
+        "The Rite of Elements",
+        "The Hoarder",
+        "The Lord of Celebration",
+        "The Opulent",
+        "The Cache",
+        "Further Invention",
+        "The Primordial"
+    ],
+    "Bazaar Map": [
+        "Home",
+        "The Drunken Aristocrat",
+        "The Saint's Treasure",
+        "The Carrion Crow",
+        "The Tyrant",
+        "The Poet",
+        "Assassin's Favour"
+    ],
+    "Desert Map": [
+        "Baited Expectations",
+        "A Note in the Wind",
+        "Earth Drinker",
+        "Acclimatisation",
+        "The Tumbleweed",
+        "Imperial Legacy",
+        "The Fortunate"
+    ],
+    "Residence Map": [
+        "The Tower",
+        "Fire Of Unknown Origin",
+        "Home",
+        "The Unexpected Prize",
+        "The Drunken Aristocrat",
+        "The Dapper Prodigy",
+        "The Carrion Crow",
+        "The Lord of Celebration",
+        "The Opulent",
+        "Light and Truth"
+    ],
+    "Stagnation Map": [
+        "The Pack Leader",
+        "The Scout",
+        "The Flora's Gift",
+        "Struck by Lightning",
+        "Alivia's Grace",
+        "The Inoculated"
+    ]
+}

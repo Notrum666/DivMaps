@@ -1,0 +1,44 @@
+﻿@model ResponseViewModel
+@{
+    ViewData["Title"] = "Div Maps";
+}
+
+<div>
+    <table bgcolor="#101010">
+        <thead>
+            <th>
+                Best maps:
+            </th>
+            <th colspan="@Model.MaxCards">
+                Value sources:
+            </th>
+        </thead>
+        <tbody>
+            @foreach (MapViewModel map in Model.Maps)
+            {
+                int count = 0;
+                string mapText = $"{map.Name} ({map.Value})";
+                string mapLink = $"https://poedb.tw/us/{map.Name.Replace(' ', '_')}";
+                <tr>
+                    <td class="map-name">
+                        <a href="@mapLink">@mapText</a>
+                    </td>
+                    @foreach (DivCardViewModel card in map.ValueSources)
+                    {
+                        count++;
+                        string cardText = $"{card.Name} ({card.ChaosValue})";
+                        string cardLink = "https://poe.ninja/economy/affliction/divination-cards/" +
+                                            card.Name.Replace(' ', '-').Replace("'", "").ToLower();
+                        <td class="card-name">
+                            <a href="@cardLink">@cardText</a>
+                        </td>
+                    }
+                    @for (; count < Model.MaxCards; count++)
+                    {
+                        <td></td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

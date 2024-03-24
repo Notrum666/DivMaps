@@ -1,0 +1,90 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Div Maps";
+}
+
+<div>
+    <grid>
+        <div style="width: 33%; display: inline-block; vertical-align: top; color: white;">
+            <div style="float: left;">
+                <p style="font-weight: 500; font-size: 20px; margin-bottom: 2px; text-align: center;">
+                    What does this tool do?
+                </p>
+                <p style="text-align: center;">
+                    It calculates best maps to favorite with <br />
+                    new Divination Scarab of Curation based on <br />
+                    current div card prices on <a href="https://poe.ninja/economy/affliction/divination-cards">poe.ninja</a>. <br/>
+                    Remember that this does not include <br />
+                    droprates, maybe we will find trust-worthy <br /> 
+                    data and try to include it later.
+                </p>
+            </div>
+        </div>
+        <div style="width: 33%; display: inline-block;">
+            <div class="update-time">
+                Prices last updated: @Model
+            </div>
+            <form id="filters_form" asp-action="GetMaps" asp-controller="Api">
+                <div style="text-align: center;">
+                    <div style="display: inline-block">
+                        <p class="form-text">Min div card price (in chaos): </p> <input name="MinValue" type="number" value="10" class="min-value" />
+                    </div>
+                    <div style="display: inline-block">
+                        <div data-toggle="tooltip" data-placement="bottom" title="Div cards with value lower than specified will be ignored when calculating map value.">
+                            <p class="tooltip-text"> ? </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 3px; margin-bottom: 3px; text-align: center;">
+                    <div style="display: inline-block">
+                        <p class="form-text">With Divination Scarab of Completion: </p> <input name="Scarab" type="checkbox" class="scarab-checkbox" value="true" checked />
+                    </div>
+                    <div style="display: inline-block;">
+                        <div data-toggle="tooltip" data-placement="bottom" title="Divination Scarab of Completion adds 20% chance to drop div card as full stack, which has different value effect depending on div card stack size. (effect is: divCardValue*(4+stackSize)/5)">
+                            <p class="tooltip-text"> ? </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <input type="submit" value="Calculate" class="submit-button" data-original-title="Tooltip." data-placement="right" data-toggle="tooltip" />
+                </div>
+            </form>
+        </div>
+        <div style="width: 33%; display: inline-block; vertical-align: top;">
+            <div class="credits">
+                <p>Created by: <a href="https://github.com/Notrum666">Notrum666</a>(<a href="https://www.pathofexile.com/account/view-profile/Notrum666">PoE</a>), <a data-toggle="tooltip" data-placement="bottom" title="abstained from leaving any links">Hrenaki</a></p>
+                <p>Hosted by: <a href="https://www.pathofexile.com/account/view-profile/Ilece">SilenceIX</a></p>
+            </div>
+        </div>
+    </grid>
+    <div id="table-container" class="table-container">
+
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+
+    function GetMaps()
+    {
+        form = $('#filters_form');
+
+        url = form.attr('action');
+        data = form.serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: data,
+            success: function (view) {
+                $('#table-container').html(view);
+            }
+        });
+
+        return false;
+    }
+
+    $('#filters_form').submit(GetMaps);
+</script>
