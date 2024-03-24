@@ -34,7 +34,7 @@ namespace DivMaps.Services
                 return;
             DateTime now = DateTime.UtcNow;
             dataContainer.LastUpdate = now;
-            _timer?.Change(new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0).AddHours(1) - now, Timeout.InfiniteTimeSpan);
+            _timer?.Change(new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddHours(1) - now, Timeout.InfiniteTimeSpan);
             Dictionary<string, DivCard> cards = response.Lines.ToDictionary(card => card.Name);
             dataContainer.Maps = maps.Select(map => new Map(map.Key, map.Value.Select(card => cards.GetValueOrDefault(card)).Where(card => card is not null).ToList())).ToList();
         }
