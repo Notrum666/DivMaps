@@ -31,6 +31,7 @@ namespace DivMaps.Controllers
                     .Select(card => new DivCardViewModel(card.Name, 
                     card.ChaosValue * (droprates ? card.DropRate : 1.0) * (scarab ? (4.0 + card.StackSize) / 5.0 : 1.0),
                     card.ChaosValue, (4.0 + card.StackSize) / 5.0, card.DropRate))
+                    .Where(card => card.Value > 0)
                     .OrderByDescending(card => card.Value).ToList();
                 maxCards = Math.Max(maxCards, mapVM.ValueSources.Count);
                 mapVM.Value = mapVM.ValueSources.Sum(card => card.Value);
