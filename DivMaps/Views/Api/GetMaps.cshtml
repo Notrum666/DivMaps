@@ -18,7 +18,7 @@
                 string mapLink = $"https://poedb.tw/us/{map.Name.Replace(' ', '_')}";
                 <tr>
                     <td class="map-name">
-                        <p><a href="@mapLink">@map.Name</a>(@map.Value.ToString("F1"))</p>
+                        <p style="margin-bottom: 0px;"><a href="@mapLink">@map.Name</a>(@map.Value.ToString("F1"))</p>
                     </td>
                     @foreach (DivCardViewModel card in map.ValueSources)
                     {

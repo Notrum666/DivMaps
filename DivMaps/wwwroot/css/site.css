@@ -50,13 +50,13 @@ input[type="number"] {
     display: inline-block;
     margin-top: -5px;
     margin-bottom: 0px;
-    margin-left: 3px;
-    margin-right: 3px;
     border-bottom: 2px dotted #FFFFFF;
 }
 
 .tooltip-text {
     font-size: 18px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .credits {
