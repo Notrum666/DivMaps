@@ -16,8 +16,9 @@ html {
 body {
     margin-bottom: 60px;
     background-color: black;
-    background-image: url(/images/PoEAffliction_AmbientBackground.png);
-    background-size: cover;
+    background-image: url(/images/PoEAffliction_AmbientBackground.jpg);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
