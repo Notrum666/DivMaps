@@ -44,15 +44,18 @@ input[type="number"] {
     font-size: 18px;
 }
 
-.tooltip-text {
+.tooltip-text, .table-tooltip-text {
     color: white;
     display: inline-block;
-    font-size: 18px;
     margin-top: -5px;
     margin-bottom: 0px;
     margin-left: 3px;
     margin-right: 3px;
     border-bottom: 2px dotted #FFFFFF;
+}
+
+.tooltip-text {
+    font-size: 18px;
 }
 
 .credits {
@@ -70,7 +73,7 @@ input[type="number"] {
     width: 40px;
 }
 
-.scarab-checkbox {
+.form-checkbox {
     width: 24px;
     height: 24px;
     accent-color: white;
@@ -127,4 +130,8 @@ table tr:nth-child(odd) td {
 
 .card-name {
     color: #F0F0F0;
+}
+
+.tooltip-inner {
+    max-width: 350px;
 }

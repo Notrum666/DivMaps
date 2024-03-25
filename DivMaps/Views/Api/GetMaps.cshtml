@@ -1,4 +1,5 @@
-﻿@model ResponseViewModel
+﻿@using System.Globalization
+@model ResponseViewModel
 
 <div>
     <table bgcolor="#101010">
@@ -14,20 +15,34 @@
             @foreach (MapViewModel map in Model.Maps)
             {
                 int count = 0;
-                string mapText = $"{map.Name} ({map.Value})";
                 string mapLink = $"https://poedb.tw/us/{map.Name.Replace(' ', '_')}";
                 <tr>
                     <td class="map-name">
-                        <a href="@mapLink">@mapText</a>
+                        <p><a href="@mapLink">@map.Name</a>(@map.Value.ToString("F1"))</p>
                     </td>
                     @foreach (DivCardViewModel card in map.ValueSources)
                     {
                         count++;
-                        string cardText = $"{card.Name} ({card.ChaosValue})";
+                        string valueText = card.Value.ToString("F1", CultureInfo.InvariantCulture);
+                        string tooltipText = valueText;
+                        if (Model.StackSizeCoef || Model.DropRateCoef)
+                            tooltipText += " = " + card.ChaosValue.ToString("F1") + "(original chaos value)" +
+                            (Model.StackSizeCoef ? " * " + card.StackSizeCoef.ToString("F2", CultureInfo.InvariantCulture) + "(stack size coef)" : "") +
+                            (Model.DropRateCoef ? " * " + card.DropRateCoef.ToString("F2", CultureInfo.InvariantCulture) + "(drop rate coef)" : "");
+                        else
+                            tooltipText += "(original chaos value)";
+
                         string cardLink = "https://poe.ninja/economy/affliction/divination-cards/" +
                                             card.Name.Replace(' ', '-').Replace("'", "").ToLower();
                         <td class="card-name">
-                            <a href="@cardLink">@cardText</a>
+                            <div style="display: inline-block">
+                                <a href="@cardLink">@card.Name</a>
+                            </div>
+                            <div style="display: inline-block">
+                                <p class="table-tooltip-text" data-toggle="tooltip" data-placement="bottom" title="@tooltipText">
+                                    (@valueText)
+                                </p>
+                            </div>
                         </td>
                     }
                     @for (; count < Model.MaxCards; count++)
@@ -39,3 +54,9 @@
         </tbody>
     </table>
 </div>
+
+<script>
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>

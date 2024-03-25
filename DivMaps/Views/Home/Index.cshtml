@@ -8,12 +8,11 @@
                     What does this tool do?
                 </p>
                 <p style="text-align: center;">
-                    It calculates best maps to favorite with <br />
-                    new Divination Scarab of Curation based on <br />
-                    current div card prices on <a href="https://poe.ninja/economy/affliction/divination-cards">poe.ninja</a>. <br/>
-                    Remember that this does not include <br />
-                    droprates, maybe we will find trust-worthy <br /> 
-                    data and try to include it later.
+                    It calculates best maps to favorite with new Divination Scarab <br />
+                    of Curation based on current div card prices on <a href="https://poe.ninja/economy/affliction/divination-cards">poe.ninja</a>. <br />
+                    It can account for new Divination Scarab of Completion <br />
+                    which affects different stack sizes differently, and for <br />
+                    <a href="https://divicards-site.pages.dev/weights">droprates</a> provided by <a href="https://discord.gg/3VxKY6gt7j">poe data science group</a>.
                 </p>
             </div>
         </div>
@@ -32,12 +31,22 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin-top: 3px; margin-bottom: 3px; text-align: center;">
+                <div style="margin-top: 3px; text-align: center;">
                     <div style="display: inline-block">
-                        <p class="form-text">With Divination Scarab of Completion: </p> <input name="Scarab" type="checkbox" class="scarab-checkbox" value="true" checked />
+                        <p class="form-text">With Divination Scarab of Completion: </p> <input name="Scarab" type="checkbox" class="form-checkbox" value="true" checked />
                     </div>
                     <div style="display: inline-block;">
-                        <div data-toggle="tooltip" data-placement="bottom" title="Divination Scarab of Completion adds 20% chance to drop div card as full stack, which has different value effect depending on div card stack size. (effect is: divCardValue*(4+stackSize)/5)">
+                        <div data-toggle="tooltip" data-placement="bottom" title="Divination Scarab of Completion adds 20% chance to drop div card as full stack, which affects values differently depending on div card stack size. Effect: divCardValue * (4 + stackSize) / 5">
+                            <p class="tooltip-text"> ? </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 3px; margin-bottom: 3px; text-align: center;">
+                    <div style="display: inline-block">
+                        <p class="form-text">Account for droprates: </p> <input name="DropRates" type="checkbox" class="form-checkbox" value="true" checked />
+                    </div>
+                    <div style="display: inline-block;">
+                        <div data-toggle="tooltip" data-placement="bottom" title="Droprates affect div card value, the rarer the card - the smaller is the coefficient. Effect: divCardValue * divCardDropRate * 1000 / maxDropRate, normalization and 1000 coefficient are for better display purposes.">
                             <p class="tooltip-text"> ? </p>
                         </div>
                     </div>
