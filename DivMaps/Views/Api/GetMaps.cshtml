@@ -2,57 +2,155 @@
 @model ResponseViewModel
 
 <div>
-    <table bgcolor="#101010">
-        <thead>
-            <th>
-                Best maps:
-            </th>
-            <th colspan="@Model.MaxCards">
-                Value sources:
-            </th>
-        </thead>
-        <tbody>
-            @foreach (MapViewModel map in Model.Maps)
-            {
-                int count = 0;
-                string mapLink = $"https://poedb.tw/us/{map.Name.Replace(' ', '_')}";
-                <tr>
-                    <td class="map-name">
-                        <p style="margin-bottom: 0px;"><a href="@mapLink">@map.Name</a>(@map.Value.ToString("F1"))</p>
-                    </td>
-                    @foreach (DivCardViewModel card in map.ValueSources)
+    @foreach (MapSetViewModel mapSet in Model.MapSets)
+    {
+        <div style="margin-bottom: 40px;">
+            <table bgcolor="#101010">
+                <thead>
+                    <th>
+                        Maps:
+                    </th>
+                </thead>
+                <tbody>
+                    @foreach (string map in mapSet.Maps)
                     {
-                        count++;
-                        string valueText = card.Value.ToString("F1", CultureInfo.InvariantCulture);
-                        string tooltipText = valueText;
-                        if (Model.StackSizeCoef || Model.DropRateCoef)
-                            tooltipText += " = " + card.ChaosValue.ToString("F1") + "(original chaos value)" +
-                            (Model.StackSizeCoef ? " * " + card.StackSizeCoef.ToString("F2", CultureInfo.InvariantCulture) + "(stack size coef)" : "") +
-                            (Model.DropRateCoef ? " * " + card.DropRateCoef.ToString("F2", CultureInfo.InvariantCulture) + "(drop rate coef)" : "");
-                        else
-                            tooltipText += "(original chaos value)";
+                        string mapLink = $"https://poedb.tw/us/{map.Replace(' ', '_')}";
+                        <tr>
+                            <td class="map-name">
+                                <p style="margin-bottom: 0px;">
+                                    <a href="@mapLink">@map</a>
+                                </p>
+                            </td>
+                        </tr>
+                    }
+                    <tr>
+                        <td>
 
-                        string cardLink = "https://poe.ninja/economy/affliction/divination-cards/" +
-                                            card.Name.Replace(' ', '-').Replace("'", "").ToLower();
-                        <td class="card-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <div style="display: inline-block">
-                                <a href="@cardLink">@card.Name</a>
+                                Expected value: @mapSet.ExpectedValue.ToString("F4")
                             </div>
                             <div style="display: inline-block">
-                                <p class="table-tooltip-text" data-toggle="tooltip" data-placement="bottom" title="@tooltipText">
-                                    (@valueText)
+                                <p class="table-tooltip-text" data-toggle="tooltip" data-placement="bottom" title="What to expect (in chaos orbs value) per div card drop with this set of maps favorited (in a long run). Calculated as sum of div card values with 10% 'more' multipler per different map in the set.">
+                                    (?)
                                 </p>
                             </div>
                         </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="width: 40px; display: inline-block;">
+
+            </div>
+
+            <table bgcolor="#101010">
+                <thead>
+                <th>Div card pool:</th>
+                <th>Price:</th>
+                <th>Weight:</th>
+                <th>Stack:</th>
+                <th>
+                    <div style="display: inline-block">
+                        Value:
+                    </div>
+                    <div style="display: inline-block">
+                        <p class="table-tooltip-text" data-toggle="tooltip" data-placement="bottom" title="Value is calculated as: Price * Weight / TotalPoolWeight@(Model.Scarab ? " * (4 + Stack) / 5" : ""), value is zero if Price is less than minimum specified.">
+                            (?)
+                        </p>
+                    </div>
+                </th>
+                <th></th>
+                <th>Div card pool:</th>
+                <th>Price:</th>
+                <th>Weight:</th>
+                <th>Stack:</th>
+                <th>
+                    <div style="display: inline-block">
+                        Value:
+                    </div>
+                    <div style="display: inline-block">
+                        <p class="table-tooltip-text" data-toggle="tooltip" data-placement="bottom" title="Value is calculated as: Price * Weight / TotalPoolWeight@(Model.Scarab ? " * (4 + Stack) / 5" : "")">
+                            (?)
+                        </p>
+                    </div>
+                </th>
+                </thead>
+                <tbody>
+                    @{
+                        int breakpoint = (int)Math.Ceiling(mapSet.Pool.Count / 2.0);
+                        @for (int i = 0; i < breakpoint; i++)
+                        {
+                            DivCardViewModel card = mapSet.Pool[i];
+                            string cardLink = "https://poe.ninja/economy/affliction/divination-cards/" + card.Name.Replace(' ', '-').Replace("'", "").ToLower();
+                            string priceColorClass = card.ChaosValue >= Model.MinValue ? "" : "red-price";
+                            <tr>
+                                <td>
+                                    <p style="margin-bottom: 0px;">
+                                        <a href="@cardLink">@card.Name</a>
+                                    </p>
+                                </td>
+                                <td class="card-data @priceColorClass">
+                                    <p style="margin-bottom: 0px;">@card.ChaosValue</p>
+                                </td>
+                                <td class="card-data">
+                                    <p style="margin-bottom: 0px;">@card.DropWeight</p>
+                                </td>
+                                <td class="card-data">
+                                    <p style="margin-bottom: 0px;">@card.StackSize</p>
+                                </td>
+                                <td class="card-data">
+                                    <p style="margin-bottom: 0px;">@card.Value.ToString("F4")</p>
+                                </td>
+                                <td></td>
+                                @if (mapSet.Pool.Count > breakpoint + i)
+                                {
+                                    card = mapSet.Pool[breakpoint + i];
+                                    cardLink = "https://poe.ninja/economy/affliction/divination-cards/" + card.Name.Replace(' ', '-').Replace("'", "").ToLower();
+                                    priceColorClass = card.ChaosValue >= Model.MinValue ? "" : "red-price";
+                                    <td class="card-data">
+                                        <p style="margin-bottom: 0px;">
+                                            <a href="@cardLink">@card.Name</a>
+                                        </p>
+                                    </td>
+                                    <td class="card-data @priceColorClass">
+                                        <p style="margin-bottom: 0px;">@card.ChaosValue</p>
+                                    </td>
+                                    <td class="card-data">
+                                        <p style="margin-bottom: 0px;">@card.DropWeight</p>
+                                    </td>
+                                    <td class="card-data">
+                                        <p style="margin-bottom: 0px;">@card.StackSize</p>
+                                    </td>
+                                    <td class="card-data">
+                                        <p style="margin-bottom: 0px;">@card.Value.ToString("F4")</p>
+                                    </td>
+                                }
+                                else
+                                {
+                                    <tr></tr>
+                                    <tr></tr>
+                                    <tr></tr>
+                                    <tr></tr>
+                                }
+                            </tr>
+                        }
                     }
-                    @for (; count < Model.MaxCards; count++)
-                    {
-                        <td></td>
-                    }
-                </tr>
-            }
-        </tbody>
-    </table>
+                    <tr>
+
+                    </tr>
+                    <tr>
+                        <td colspan="11" align="center">
+                            Total pool weight: @mapSet.Pool.Sum(card => card.DropWeight)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    }
 </div>
 
 <script>

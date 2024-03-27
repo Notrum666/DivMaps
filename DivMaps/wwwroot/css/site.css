@@ -33,7 +33,7 @@ input[type="number"] {
 
 .table-container {
     display: table;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -70,7 +70,7 @@ input[type="number"] {
     text-align: right;
 }
 
-.min-value {
+.form-value {
     width: 40px;
 }
 
@@ -95,6 +95,8 @@ input[type="number"] {
 table {
     border-collapse: collapse;
     color: white;
+    display: inline-block;
+    vertical-align: top;
 }
 
 table, td, th {
@@ -129,8 +131,16 @@ table tr:nth-child(odd) td {
     font-weight: 600;
 }
 
-.card-name {
+.card-data {
     color: #F0F0F0;
+}
+
+.red-price {
+    color: #FFA0A0;
+}
+
+.card-data p {
+    white-space: nowrap;
 }
 
 .tooltip-inner {

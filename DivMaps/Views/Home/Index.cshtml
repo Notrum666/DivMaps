@@ -3,15 +3,15 @@
 <div>
     <grid>
         <div style="width: 33%; display: inline-block; vertical-align: top; color: white;">
-            <div style="float: left;">
+            <div style="float: left; margin-left: 20px; margin-top: 10px;">
                 <p style="font-weight: 500; font-size: 20px; margin-bottom: 2px; text-align: center;">
                     What does this tool do?
                 </p>
                 <p style="text-align: center;">
-                    It calculates best maps to favorite with new Divination Scarab <br />
-                    of Curation based on current div card prices on <a href="https://poe.ninja/economy/affliction/divination-cards">poe.ninja</a>. <br />
-                    It can account for new Divination Scarab of Completion <br />
-                    which affects different stack sizes differently, and for <br />
+                    It calculates close approximate to best sets of maps to favorite with new <br />
+                    Divination Scarab of Curation based on current div card prices on <a href="https://poe.ninja/economy/affliction/divination-cards">poe.ninja</a>. <br />
+                    It can account for new Divination Scarab of Completion which affects different <br />
+                    stack sizes differently, for different number of favorite map slots, and for <br />
                     <a href="https://divicards-site.pages.dev/weights">droprates</a> provided by <a href="https://discord.gg/3VxKY6gt7j">poe data science group</a>.
                 </p>
             </div>
@@ -23,10 +23,10 @@
             <form id="filters_form" asp-action="GetMaps" asp-controller="Api">
                 <div style="text-align: center;">
                     <div style="display: inline-block">
-                        <p class="form-text">Min div card price (in chaos): </p> <input name="MinValue" type="number" value="10" class="min-value" />
+                        <p class="form-text">Min div card price (in chaos): </p> <input name="MinValue" type="number" value="10" class="form-value" />
                     </div>
                     <div style="display: inline-block">
-                        <div data-toggle="tooltip" data-placement="bottom" title="Div cards with value lower than specified will be ignored when calculating map value.">
+                        <div data-toggle="tooltip" data-placement="bottom" title="Div cards with price lower than specified will be ignored when calculating their value (their drop weight will still be included for other div cards).">
                             <p class="tooltip-text"> ? </p>
                         </div>
                     </div>
@@ -43,10 +43,10 @@
                 </div>
                 <div style="margin-top: 3px; margin-bottom: 3px; text-align: center;">
                     <div style="display: inline-block">
-                        <p class="form-text">Account for droprates: </p> <input name="DropRates" type="checkbox" class="form-checkbox" value="true" checked />
+                        <p class="form-text">Favorite map slots: </p> <input name="FavSlots" type="number" class="form-value" value="12" min="1" max="12"/>
                     </div>
                     <div style="display: inline-block;">
-                        <div data-toggle="tooltip" data-placement="bottom" title="Droprates affect div card value, the rarer the card - the smaller is the coefficient. Effect: divCardValue * divCardDropRate * 1000 / maxDropRate, normalization and 1000 coefficient are for better display purposes.">
+                        <div data-toggle="tooltip" data-placement="bottom" title="How many maps to combine when calculating map set value.">
                             <p class="tooltip-text"> ? </p>
                         </div>
                     </div>

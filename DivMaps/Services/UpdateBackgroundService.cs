@@ -31,6 +31,11 @@ namespace DivMaps.Services
                 Dictionary<string, List<string>>? maps = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(File.ReadAllText("./divcards.json"));
                 if (maps is null)
                     return;
+
+                List<string> mapNames = maps.Select(map => map.Key).ToList();
+                HashSet<HashSet<string>> sets = new HashSet<HashSet<string>>();
+                
+
                 Dictionary<string, double>? droprates = JsonConvert.DeserializeObject<Dictionary<string, double>>(File.ReadAllText("./droprates.json"));
                 if (droprates is null)
                     return;
@@ -40,7 +45,7 @@ namespace DivMaps.Services
                 DateTime now = DateTime.UtcNow;
                 dataContainer.LastUpdate = now;
                 _timer?.Change(new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddHours(1) - now, Timeout.InfiniteTimeSpan);
-                response.Lines.ForEach(card => card.DropRate = droprates[card.Name]);
+                response.Lines.ForEach(card => card.DropWeight = droprates[card.Name]);
                 Dictionary<string, DivCard> cards = response.Lines.ToDictionary(card => card.Name);
                 dataContainer.Maps = maps.Select(map => new Map(map.Key, map.Value.Select(card => cards.GetValueOrDefault(card)).Where(card => card is not null).ToList())).ToList();
             }
