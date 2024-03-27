@@ -68,7 +68,7 @@ namespace DivMaps.Controllers
                 pool = cards.Select(card => new DivCardViewModel(card.Name, card.ChaosValue, card.StackSize, card.DropWeight,
                     card.ChaosValue >= minValue ? card.ChaosValue * card.DropWeight / totalWeight * (scarab ? (4.0 + card.StackSize) / 5.0 : 1.0) : 0.0))
                     .OrderByDescending(card => card.Value).ToList();
-                ExpectedValue = pool.Sum(card => card.Value) * (1.0 + (scarab ? maps.Distinct().Count() / 10.0 : 0.0));
+                ExpectedValue = pool.Sum(card => card.Value) * (1.0 + maps.Distinct().Count() / 10.0);
             }
         }
     }
